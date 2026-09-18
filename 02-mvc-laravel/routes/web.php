@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,3 +9,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ProdutoController::class, 'index']);
 Route::get('/produtos/{id}', [ProdutoController::class, 'show']);
+
+Route::get('/categorias', [CategoriaController::class, 'index']);
+Route::get('/categorias/{id}', [CategoriaController::class, 'show']);
